@@ -20,7 +20,7 @@ ext {
     springVersion = '6.2.9'
     thymeleafVersion = '3.1.2.RELEASE'
     lombokVersion = '1.18.30'
-    h2Version = '2.2.224'
+    h2Version = '2.3.232'
     junitVersion = '5.10.2'
 }
 
@@ -28,8 +28,9 @@ dependencies {
     implementation "org.springframework:spring-webmvc:$springVersion"
     implementation "org.springframework:spring-jdbc:$springVersion"
     implementation "org.thymeleaf:thymeleaf-spring6:$thymeleafVersion"
-    runtimeOnly "com.h2database:h2:$h2Version"
+    implementation "com.h2database:h2:$h2Version"
     compileOnly "org.projectlombok:lombok:$lombokVersion"
+    compileOnly("jakarta.servlet:jakarta.servlet-api:6.1.0-M2")
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
     testImplementation "org.springframework:spring-test:$springVersion"
